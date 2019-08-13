@@ -9,7 +9,7 @@
 
 > We select an icon, then convert it into various sizes as required for PWA and then add the serviceworker and manifest files.
 
-> This script automates this boring process by generating PWA boilerplate code, along with a GUI interface for selecting the icon and automatically resizing it in different sizes for PWA.
+> This script automates this boring process by generating PWA boilerplate code, along with a GUI interface for selecting the icon and automatically resizing it in different sizes required for PWA.
 
 ------------------------------------------
 
