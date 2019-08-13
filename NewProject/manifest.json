@@ -1,13 +1,13 @@
 {
-    "name": "MyProject",
-    "short_name": "MyProject",
+    "name": "NewProject",
+    "short_name": "NewProject",
     "lang": "en-US",
-    "start_url": "/MyProject/",
+    "start_url": "/NewProject/",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",
-    "background_color": "#FFFFFF",
-    "theme_color": "#FFFFFF",
+    "background_color": "#000000",
+    "theme_color": "#000000",
     "icons": [
         {
             "src": "icons/icon-48-48.png",
