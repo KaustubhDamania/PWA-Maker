@@ -16,7 +16,7 @@
 ### Demo
 <br>
 <div align = "center">
-<img src="./assets/demo.gif" width=800px height=450px />
+<img src="./assets/demo.gif" width=700px height=450px />
 </div>
 
 ------------------------------------------
