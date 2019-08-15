@@ -17,6 +17,23 @@ echo "window.addEventListener("", async e => { // trigger on load
     }
 });" > ./"$1"/js/app.js
 
+echo '<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <!-- Manifest link for PWA -->
+        <link rel="manifest" href="./manifest.json">
+        <!-- CSS linker -->
+        <link rel="stylesheet" href="./css/app.css">
+        <title></title>
+    </head>
+    <body>
+
+    <!-- JS linker -->
+    <script src="./js/app.js" charset="utf-8"></script>
+    </body>
+</html>' > ./"$1"/index.html
+
 echo "// collection of all the static files which form the the shell of your app
 const staticAssets = [
     './',
@@ -35,7 +52,7 @@ self.addEventListener('install', async event => {
     cache.addAll(staticAssets);
 });
 
-// called whenever fetxh function is called in the client side
+// called whenever fetch function is called in the client side
 self.addEventListener('fetch', event => {
     console.log(event);
     const {request} = event;
@@ -53,11 +70,11 @@ self.addEventListener('fetch', event => {
 });
 
 self.addEventListener('message', function(event){
-    if(event.data=="offline")
+    if(event.data==\"offline\")
     mode=false
     else
     mode=true
-    console.log("message: "+mode);
+    console.log(\"message: \"+mode);
 });
 
 async function cacheData(request)
