@@ -1,4 +1,4 @@
-window.addEventListener(, async e => { // trigger on load
+window.addEventListener("", async e => { // trigger on load
     if ('serviceWorker' in navigator) { // show other serviceworker in application tabs
         try {
             navigator.serviceWorker.register('serviceworker.js');

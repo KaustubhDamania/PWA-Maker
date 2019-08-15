@@ -5,7 +5,7 @@ mkdir assets css js icons
 touch index.html manifest.json serviceworker.js css/app.css js/app.js
 cd ..
 
-echo "window.addEventListener("", async e => { // trigger on load
+echo "window.addEventListener(\"\", async e => { // trigger on load
     if ('serviceWorker' in navigator) { // show other serviceworker in application tabs
         try {
             navigator.serviceWorker.register('serviceworker.js');
