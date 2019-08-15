@@ -34,6 +34,8 @@ echo '<!DOCTYPE html>
     </body>
 </html>' > ./"$1"/index.html
 
+echo "HTML file populated"
+
 echo "// collection of all the static files which form the the shell of your app
 const staticAssets = [
     './',
