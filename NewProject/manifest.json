@@ -2,12 +2,12 @@
     "name": "NewProject",
     "short_name": "NewProject",
     "lang": "en-US",
-    "start_url": "/NewProject/",
+    "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",
-    "background_color": "#000000",
-    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF",
     "icons": [
         {
             "src": "icons/icon-48-48.png",

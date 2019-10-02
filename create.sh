@@ -5,17 +5,16 @@ mkdir assets css js icons
 touch index.html manifest.json serviceworker.js css/app.css js/app.js
 cd ..
 
-echo "window.addEventListener(\"\", async e => { // trigger on load
-    if ('serviceWorker' in navigator) { // show other serviceworker in application tabs
-        try {
-            navigator.serviceWorker.register('serviceworker.js');
-            console.log('SW registered');
-        } catch (error) {
-            console.log('SW failed');
+echo "if ('serviceWorker' in navigator) { // show other serviceworker in application tabs
+    try {
+        navigator.serviceWorker.register('../serviceworker.js');
+        console.log('SW registered');
+    } catch (error) {
+        console.log('SW failed');
 
-        }
     }
-});" > ./"$1"/js/app.js
+}
+" > ./"$1"/js/app.js
 
 echo '<!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -40,16 +39,16 @@ echo "// collection of all the static files which form the the shell of your app
 const staticAssets = [
     './',
     './assets/',
-    './icons/'
+    './icons/',
     './js/',
     './css/'
 ];
 
 var mode; //used to keep a check whether we are online at this point of time or offline
 
-// install event is called the very first time we register a servic worker
+// install event is called the very first time we register a service worker
 self.addEventListener('install', async event => {
-    // #caches are http caches provided by service worker check Application >Cache > Cache Storage
+    // #caches are http caches provided by service worker check Application > Cache > Cache Storage
     const cache = await caches.open('static-def'); // stores the shell part
     cache.addAll(staticAssets);
 });
@@ -73,9 +72,9 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('message', function(event){
     if(event.data==\"offline\")
-    mode=false
+        mode=false
     else
-    mode=true
+        mode=true
     console.log(\"message: \"+mode);
 });
 

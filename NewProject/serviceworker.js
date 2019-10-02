@@ -2,16 +2,16 @@
 const staticAssets = [
     './',
     './assets/',
-    './icons/'
+    './icons/',
     './js/',
     './css/'
 ];
 
 var mode; //used to keep a check whether we are online at this point of time or offline
 
-// install event is called the very first time we register a servic worker
+// install event is called the very first time we register a service worker
 self.addEventListener('install', async event => {
-    // #caches are http caches provided by service worker check Application >Cache > Cache Storage
+    // #caches are http caches provided by service worker check Application > Cache > Cache Storage
     const cache = await caches.open('static-def'); // stores the shell part
     cache.addAll(staticAssets);
 });
@@ -35,9 +35,9 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('message', function(event){
     if(event.data=="offline")
-    mode=false
+        mode=false
     else
-    mode=true
+        mode=true
     console.log("message: "+mode);
 });
 

@@ -25,13 +25,6 @@ manifest = {
 manifest['name'] = sys.argv[1]
 manifest['short_name'] = sys.argv[1]
 
-new_url = input('Enter the start URL for PWA?\nLeave it blank if you want it to be /{}/: '.format(manifest['name']))
-
-if new_url == '':
-    new_url = manifest['name']
-
-manifest['start_url'] = '/{}/'.format(new_url)
-
 new_theme = input('Enter the background/theme color for PWA?\nLeave it blank if you want it to be #FFFFFF: ')
 
 if new_theme == '':
