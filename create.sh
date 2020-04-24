@@ -20,7 +20,13 @@ echo '<!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <!-- Manifest link for PWA -->
+
+	     <meta name="mobile-web-app-capable" content="yes">
+
+		 <meta name="apple-mobile-web-app-capable" content="yes">
+		 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+		 <meta name="apple-mobile-web-app-title" content="$1">
+        <!-- Manifest link for PWA -->		
         <link rel="manifest" href="./manifest.json">
         <!-- CSS linker -->
         <link rel="stylesheet" href="./css/app.css">
